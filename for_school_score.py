@@ -8,8 +8,8 @@ for class_score in school_scores:
     cls_sc = 0
     for num in class_score['scores']:
         cls_sc = cls_sc + num
-    school_total_score = school_total_score + cls_sc
     mid_cls_sc = cls_sc / len(class_score['scores'])
+    school_total_score = school_total_score + mid_cls_sc
     print('В классе {} средний балл равен {}'.format(class_score['school_class'], mid_cls_sc))
 
 sc_mid_sc = school_total_score / len(school_scores)
