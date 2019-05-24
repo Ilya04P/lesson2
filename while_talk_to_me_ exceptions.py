@@ -5,9 +5,8 @@ def ask_user(questions):
         while True:
             try:
                 asks = input('Пользователь: ')
-                for ask, answer in questions.items():
-                    if asks == ask:
-                        print('Программа: {}'.format(answer))
+                if asks in questions:
+                    print('Программа: {}'.format(questions[asks]))
             except KeyboardInterrupt:
                 print('Пока')
                 break           
